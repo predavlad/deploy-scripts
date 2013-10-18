@@ -18,5 +18,6 @@ php app/console cache:clear --env=prod
 php app/console assets:install
 php app/console assetic:dump
 
+chown -R www-data:www-data ./
 chmod 0777 -R app/cache app/logs
 echo 'Done.'
