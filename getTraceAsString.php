@@ -1,5 +1,10 @@
 <?php
-/** the default Exception::getTraceAsString() method truncates the characters */
+/** 
+ * The default Exception::getTraceAsString() truncates the method parameters
+ * It cannot be overwritten because it is final
+ * 
+ * This method duplicates the Exception::getTraceAsString()  functionality, but without truncating the parameters
+ */
 function getExceptionTraceAsString($exception) {
     $rtn = "";
     $count = 0;
