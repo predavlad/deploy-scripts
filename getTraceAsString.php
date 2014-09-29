@@ -3,9 +3,10 @@
  * The default Exception::getTraceAsString() truncates the method parameters
  * It cannot be overwritten because it is final
  * 
- * This method duplicates the Exception::getTraceAsString()  functionality, but without truncating the parameters
+ * This method duplicates the Exception::getTraceAsString()  functionality, but without truncating the parameters.
+ * Pass the exception object and enjoy.
  */
-function getExceptionTraceAsString($exception) {
+function getExceptionTraceAsString(Exception $exception) {
     $rtn = "";
     $count = 0;
     foreach ($exception->getTrace() as $frame) {
